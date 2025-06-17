@@ -22,11 +22,10 @@ Whether you're new to CP or revisiting fundamentals — I hope this helps you na
 
 ```bash
 📁 problems/
-   ├── week-01/
-   │    ├── problem-name.cpp
-   │    └── notes.md
-   ├── week-02/
-   └── ...
+   └── month_1/
+       └── week_1/
+           ├── problem-name.cpp
+           └── notes.md
 
 📁 algorithms/
    ├── binary-search.cpp
