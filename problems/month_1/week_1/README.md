@@ -28,4 +28,8 @@ I'll be using this section to highlight and reflect on problems that stood out �
 
 This is a simple and intuitive two-pointers problem that's great for beginners. It helps build logic for symmetric traversal and boundary checking. I recommend this as a warm-up for those getting back into CP or starting out with problem-solving strategies.
 
+### 🟢 [Petr and a Combination Lock (Codeforces 1097B)](https://codeforces.com/problemset/problem/1097/B)
+
+This is a classic example of using **bitmasking** or **bitwise enumeration** to check all possible combinations. The core idea is to try every subset of directions by rotating left or right and checking if the total angle sums to a multiple of 360°. It’s a clever brute-force problem that teaches how bitwise operations can be useful when you need to explore all possible configurations efficiently.
+
 > I'll continue adding good problems like this in the README to help others discover valuable practice problems.

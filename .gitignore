@@ -1,0 +1,16 @@
+# Ignore all .cph and .vscode folders recursively
+**/.cph/
+**/.vscode/
+
+# Ignore C/C++ compiled executables
+# Common pattern: no extension and executable permission (on Unix)
+# This ignores all files without an extension (commonly used for executables)
+*.out
+*.exe
+*.o
+*.obj
+*.gch
+a.out
+main
+
+# Optional: ignore all files with no extension (be careful with this)
