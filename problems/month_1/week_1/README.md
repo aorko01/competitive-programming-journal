@@ -32,4 +32,12 @@ This is a simple and intuitive two-pointers problem that's great for beginners. 
 
 This is a classic example of using **bitmasking** or **bitwise enumeration** to check all possible combinations. The core idea is to try every subset of directions by rotating left or right and checking if the total angle sums to a multiple of 360°. It’s a clever brute-force problem that teaches how bitwise operations can be useful when you need to explore all possible configurations efficiently.
 
+### 🟢 [Good Start (Codeforces 2113B)](https://codeforces.com/contest/2113/problem/B)
+
+This was a good problem for practicing careful case analysis. It requires recognizing and handling all the necessary scenarios thoughtfully, which makes it a great problem for improving attention to detail and logical completeness.
+
+📷 **[View Diagram/Image Explanation](https://github.com/your-username/your-repo/blob/main/assets/good_start_diagram.png)**  
+🧠 You can refer to this image along with the tutorial to better understand the structure of the problem and its cases.
+
+
 > I'll continue adding good problems like this in the README to help others discover valuable practice problems.
