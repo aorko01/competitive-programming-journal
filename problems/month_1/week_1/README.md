@@ -36,7 +36,7 @@ This is a classic example of using **bitmasking** or **bitwise enumeration** to 
 
 This was a good problem for practicing careful case analysis. It requires recognizing and handling all the necessary scenarios thoughtfully, which makes it a great problem for improving attention to detail and logical completeness.
 
-📷 **[View Diagram/Image Explanation](https://github.com/your-username/your-repo/blob/main/assets/good_start_diagram.png)**  
+📷 **[View Diagram/Image Explanation](https://github.com/aorko01/competitive-programming-journal/blob/main/problems/month_1/week_1/Good_problems/photo_2025-06-19_21-52-08.jpg)**  
 🧠 You can refer to this image along with the tutorial to better understand the structure of the problem and its cases.
 
 

@@ -1,17 +1,28 @@
-# Ignore all .cph and .vscode folders recursively
-**/.cph/
-**/.vscode/
-
-# Ignore C/C++ compiled executables
-# Common pattern: no extension and executable permission (on Unix)
-# This ignores all files without an extension (commonly used for executables)
-*.out
-*.exe
+# Ignore compiled C++ files and binaries
 *.o
 *.obj
 *.gch
+*.exe
+*.out
 a.out
 main
 
-# Optional: ignore all files with no extension (be careful with this)
+# Ignore all files with no extension (optional, uncomment if needed)
+# This can be dangerous — only use if you're sure you want this
+# *
 
+# Ignore CPH and VSCode folders recursively
+**/.cph/
+**/.vscode/
+
+# Optional: Ignore CMake or build directories if used
+build/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Optional: Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
