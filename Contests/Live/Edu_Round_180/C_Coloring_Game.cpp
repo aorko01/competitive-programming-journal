@@ -47,7 +47,6 @@ void solve()
     {
         cin >> v[i];
     }
-
     ll total = 0;
     for (ll i = 0; i < n - 2; i++)
     {
