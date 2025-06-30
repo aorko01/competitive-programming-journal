@@ -39,11 +39,11 @@ This was a good problem for practicing careful case analysis. It requires recogn
 📷 **[View Diagram/Image Explanation](https://github.com/aorko01/competitive-programming-journal/blob/main/problems/month_1/week_1/Good_problems/photo_2025-06-19_21-52-08.jpg)**  
 🧠 You can refer to this image along with the tutorial to better understand the structure of the problem and its cases.
 
-### 🟢 [ Racing(Codeforces 2110C)](https://codeforces.com/contest/2110/problem/C)
+### 🟢 [Racing (Codeforces 2110C)](https://codeforces.com/contest/2110/problem/C)
 
 This problem involves simulating the evolution of valid height ranges under directional constraints given by an array `d[]`, where each value is -1, 0, or 1. You must assign heights such that each move conforms to the `d[i]` constraint.
 
-📷 **[View Diagram/Image Explanation]()** 🧠 **Brief Explanation**:
+📷 **[View Diagram/Image Explanation](https://github.com/aorko01/competitive-programming-journal/blob/main/problems/month_1/week_1/Good_problems/Pasted%20image.png)** 🧠 **Brief Explanation**:
 * **White**: Original heights
 * **Blue**: Valid ranges based on `d[i]`
 * **Purple**: Overlaps (intersection) between expected and valid heights
@@ -57,6 +57,6 @@ The key idea:
 
 If at any point the actual height lies outside this valid range, the answer is -1.
 
-🔍 The subtle trick is: When choosing the final height, always pick the **maximum possible valid value**, because backtracking (like going down when `d[i] = 1`) may not be possible otherwise — especially if we chose a smaller height earlier.
+🔍 The subtle trick is: When choosing the final height, always pick the **maximum possible valid value**, because backtracking (like going down when `d[i] = -1`) may not be possible otherwise — especially if we chose a smaller height earlier.
 
 > I'll continue adding good problems like this in the README to help others discover valuable practice problems.
