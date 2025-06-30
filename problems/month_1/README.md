@@ -59,4 +59,17 @@ If at any point the actual height lies outside this valid range, the answer is -
 
 🔍 The subtle trick is: When choosing the final height, always pick the **maximum possible valid value**, because backtracking (like going down when `d[i] = -1`) may not be possible otherwise — especially if we chose a smaller height earlier.
 
+### 🟢 [Ugly Number III (LeetCode 1201)](https://leetcode.com/problems/ugly-number-iii/)
+
+This is an excellent problem that combines **binary search** with the **inclusion-exclusion principle**. The goal is to find the nth ugly number that is divisible by at least one of three given numbers (a, b, c).
+
+🧠 **Key Insights**:
+* Use binary search on the answer space to find the nth ugly number
+* For a given number `x`, count how many ugly numbers ≤ x exist using inclusion-exclusion:
+  * Count = `x/a + x/b + x/c - x/lcm(a,b) - x/lcm(b,c) - x/lcm(a,c) + x/lcm(a,b,c)`
+* Binary search finds the smallest number where this count ≥ n
+
+This problem is a great example of how mathematical principles can optimize what would otherwise be a brute-force approach. It's particularly valuable for understanding how to apply inclusion-exclusion in competitive programming contexts.
+
+
 > I'll continue adding good problems like this in the README to help others discover valuable practice problems.
