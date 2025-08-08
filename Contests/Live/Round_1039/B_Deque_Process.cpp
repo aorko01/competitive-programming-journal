@@ -61,12 +61,26 @@ void solve() {
     // Your solution here
     ll n;
     cin>>n;
-    if((n-1) %4==3)
+    vll v(n);
+    rep(i,0,n)
     {
-        cout<<"Bob"<<endl
+        cin>>v[i];
     }
-    else
-    cout<<"Alice"<<endl;
+    ll i=0,j=n-1;
+    while(true)
+    {
+        if(i+4<j-4)
+        {
+            bool inc1=is_sorted(v.begin()+i,v.begin()+i+4);
+            bool dec1=is_sorted(v.begin()+i,v.begin()+i+4,greater<ll>());
+            bool inc2=is_sorted(v.begin()+j-4,v.begin()+j);
+            bool dec2=is_sorted(v.begin()+j-4,v.begin()+j,greater<ll>());
+            if(inc1 && inc2)
+            {
+                while(i<)
+            }
+        }
+    }
 }
 
 int main() {

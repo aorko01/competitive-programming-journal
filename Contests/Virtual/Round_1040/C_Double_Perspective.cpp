@@ -57,22 +57,35 @@ void fastIO() {
     cin.tie(0); cout.tie(0);
 }
 
+bool custom_cmp(const pll &a, const pll &b) {
+    if (a.first != b.first) return a.first < b.first;  // sort by first (ascending)
+    return a.second > b.second;                        // if first equal, sort by second (descending)
+}
+
 void solve() {
     // Your solution here
     ll n;
     cin>>n;
-    if((n-1) %4==3)
+    vpll v(n);
+    rep(i,0,n)
     {
-        cout<<"Bob"<<endl
+        cin>>v[i].first>>v[i].second;
     }
-    else
-    cout<<"Alice"<<endl;
+    sort(all(v), custom_cmp);
+    ll curr=-1;
+    rep(i,0,n)
+    {
+        if(curr!=v[i].first)
+        {
+            
+        }
+    }
 }
 
 int main() {
     fastIO();
     int tc = 1;
-    cin >> tc;
+    // cin >> tc;
     rep(t, 1, tc + 1) {
         // cout << "Case #" << t << ": ";
         solve();

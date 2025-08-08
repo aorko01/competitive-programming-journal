@@ -59,14 +59,48 @@ void fastIO() {
 
 void solve() {
     // Your solution here
-    ll n;
-    cin>>n;
-    if((n-1) %4==3)
+    ll n,s;
+    cin>>n>>s;
+    map<ll,ll> num;
+    ll sum=0;
+    rep(i,0,n)
     {
-        cout<<"Bob"<<endl
+        ll x;
+        cin>>x;
+        sum+=x;
+        num[x]++;
     }
-    else
-    cout<<"Alice"<<endl;
+    if(sum>s)
+    {
+        for(auto i: num)
+        {
+            rep(j,0,i.second)
+            {
+                cout<<i.first<<" ";
+            }
+
+        }
+        cout<<endl;
+        return;
+    }
+    if(s-sum==1)
+    {
+        rep(j,0,num[0])
+        {
+            cout<<0<<" ";
+        }
+        rep(j,0,num[2])
+        {
+            cout<<2<<" ";
+        }
+        rep(j,0,num[1])
+        {
+            cout<<1<<" ";
+        }
+        cout<<endl;
+        return ;
+    }
+    cout<<-1<<endl;
 }
 
 int main() {

@@ -58,15 +58,10 @@ void fastIO() {
 }
 
 void solve() {
-    // Your solution here
-    ll n;
-    cin>>n;
-    if((n-1) %4==3)
-    {
-        cout<<"Bob"<<endl
-    }
-    else
-    cout<<"Alice"<<endl;
+    string s;
+    cin >> s;
+    sort(s.begin(), s.end(),greater<char>());
+    cout << s << '\n';
 }
 
 int main() {

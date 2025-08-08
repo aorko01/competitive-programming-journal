@@ -59,14 +59,13 @@ void fastIO() {
 
 void solve() {
     // Your solution here
-    ll n;
-    cin>>n;
-    if((n-1) %4==3)
-    {
-        cout<<"Bob"<<endl
+    ll n, m;
+    cin >> n >> m;
+    if(n<=2 && m<=2 || n == 1 || m == 1) {
+        cout << "NO\n";
     }
     else
-    cout<<"Alice"<<endl;
+    cout << "YES\n";
 }
 
 int main() {

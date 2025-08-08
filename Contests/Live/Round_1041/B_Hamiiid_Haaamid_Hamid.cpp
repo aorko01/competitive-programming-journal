@@ -59,14 +59,40 @@ void fastIO() {
 
 void solve() {
     // Your solution here
-    ll n;
-    cin>>n;
-    if((n-1) %4==3)
+    ll n,k;
+    cin>>n>>k;
+    string s;
+    cin>>s;
+    ll right=0,left=0;
+    rep(i,k,n)
     {
-        cout<<"Bob"<<endl
+        if(s[i]=='#')
+        {
+            right=n-i;
+            break;
+        }
+    }
+    per(i,0,k)
+    {
+        if(s[i]=='#')
+        {
+            left=i+1;
+            break;
+        }
+    }
+    if(left==0 || right==0)
+    {
+        cout<<1<<endl;
+        return;
+    }
+    if(left>right)
+    {
+        cout<<min(left,n-k)+1<<endl;
     }
     else
-    cout<<"Alice"<<endl;
+    {
+        cout<<min(right,k-1)+1<<endl;
+    }
 }
 
 int main() {

@@ -59,14 +59,40 @@ void fastIO() {
 
 void solve() {
     // Your solution here
-    ll n;
-    cin>>n;
-    if((n-1) %4==3)
+    ll n,c;
+    cin>>n>>c;
+    ll total=0;
+    vector<ll> v(n);
+    rep(i,0,n)
     {
-        cout<<"Bob"<<endl
+        cin>>v[i];
     }
-    else
-    cout<<"Alice"<<endl;
+    sort(v.begin(),v.end());
+    ll i=0;
+    while(v[i]<=c)
+    i++;
+    i--;
+    total+=v.size()-1-i;
+    ll now =1;
+    ll j=i;
+    while(j>=0)
+    {
+        if(v[j]*now<=c)
+        {
+            now*=2;
+            j--;
+        }
+        else
+        {
+            while(v[j]*now>c)
+            {
+                j--;
+                total++;
+            }
+        
+        }
+    }
+    cout<<total<<endl;
 }
 
 int main() {

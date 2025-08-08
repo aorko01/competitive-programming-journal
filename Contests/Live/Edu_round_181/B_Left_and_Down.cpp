@@ -2,11 +2,24 @@
 using namespace std;
 
 // Debugging utilities
-template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
-template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type>
-ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+template <typename A, typename B>
+ostream &operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template <typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type>
+ostream &operator<<(ostream &os, const T_container &v)
+{
+    os << '{';
+    string sep;
+    for (const T &x : v)
+        os << sep << x, sep = ", ";
+    return os << '}';
+}
 void dbg_out() { cerr << endl; }
-template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
+template <typename Head, typename... Tail>
+void dbg_out(Head H, Tail... T)
+{
+    cerr << ' ' << H;
+    dbg_out(T...);
+}
 #ifdef LOCAL
 #define dbg(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
 #else
@@ -39,7 +52,7 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 
 // Loops
 #define rep(i, a, b) for (int i = (a); i < (b); ++i)
-#define per(i, a, b) for (int i = (b)-1; i >= (a); --i)
+#define per(i, a, b) for (int i = (b) - 1; i >= (a); --i)
 #define each(x, a) for (auto &x : a)
 
 // Constants
@@ -52,28 +65,36 @@ const ld EPS = 1e-9;
 const ld PI = acos(-1);
 
 // Fast IO
-void fastIO() {
+void fastIO()
+{
     ios_base::sync_with_stdio(0);
-    cin.tie(0); cout.tie(0);
+    cin.tie(0);
+    cout.tie(0);
 }
 
-void solve() {
+void solve()
+{
     // Your solution here
-    ll n;
-    cin>>n;
-    if((n-1) %4==3)
-    {
-        cout<<"Bob"<<endl
+    ll x, y, z;
+    cin >> x >> y >> z;
+    if(x<z && y<z) {
+        cout<<1<<endl;
+        return;
+    }
+    else if(x>z && y>z) {
+        
     }
     else
-    cout<<"Alice"<<endl;
+
 }
 
-int main() {
+int main()
+{
     fastIO();
     int tc = 1;
     cin >> tc;
-    rep(t, 1, tc + 1) {
+    rep(t, 1, tc + 1)
+    {
         // cout << "Case #" << t << ": ";
         solve();
     }
