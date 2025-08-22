@@ -76,59 +76,47 @@ void solve()
 {
     // Your solution here
     ll n;
-    cin>>n;
-    vll a(n),b(n);
-    rep(i,0,n)
+    cin >> n;
+    string s;
+    cin >> s;
+    set<char> s1,s2;
+    vll fow(n , 0), back(n , 0);
+    s1.insert(s[0]);
+    fow[0]=1;
+    rep(i, 1, n)
     {
-        cin>>a[i];
-    }
-    rep(i,0,n)
-    {
-        cin>>b[i];
-    }
-    // ll max_a=1,max_b=1;
-    ll curr=1;
-    map<ll,ll> m1,m2;
-    rep(i,1,n)
-    {
-        if(a[i]!=a[i-1])
+        if (s1.find(s[i]) == s1.end())
         {
-            if(m1.find(a[i-1])!=m1.end())
-            m1[a[i-1]]=max(m1[a[i-1]],curr);
-            else
-            {
-                m1[a[i-1]]=curr;
-            }
-            curr=1;
+            fow[i] = fow[i-1]+1;
+            s1.insert(s[i]);
         }
         else
         {
-            curr++;
+            fow[i ] = fow[i-1];
+            
         }
     }
-    curr=1;
-    rep(i,1,n)
+    s2.insert(s[n-1]);
+    back[n-1]=1;
+    per(i, 0, n-1)
     {
-        if(b[i]!=b[i-1])
+        if (s2.find(s[i]) == s2.end())
         {
-            if(m2.find(a[i-1])==m2.end())
-            {
-                m2[b[i-1]]=max(m2[b[i-1]],curr);
-            }
-            else
-            {
-
-            }
-            curr=1;
+            back[i] = back[i+1]+1;
+            s2.insert(s[i]);
         }
         else
         {
-            curr++;
+            back[i ] = back[i+1];
+            
         }
     }
     ll maxi=INT_MIN;
-    
-
+    rep(i,0,n)
+    {
+        maxi=max(maxi,fow[i]+back[i+1]);
+    }
+    cout<<maxi<<endl;
 }
 
 int main()
